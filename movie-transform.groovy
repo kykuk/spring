@@ -4,6 +4,8 @@ import groovy.json.JsonOutput
 def jsonSlurper = new JsonSlurper()
 def movie = jsonSlurper.parseText(new String(payload))
 
+println movie
+
 def connection = new URL( "https://imdb8.p.rapidapi.com/title/get-ratings?tconst=${movie.id}")
                  .openConnection() as HttpURLConnection
 
@@ -24,4 +26,5 @@ if ( connection.responseCode == 200 ) {
     println connection.responseCode + ": " + connection.inputStream.text
 }
 
+println movie
 JsonOutput.toJson(movie)
