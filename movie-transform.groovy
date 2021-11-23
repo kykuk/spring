@@ -10,7 +10,8 @@ def connection = new URL( "https://imdb-internet-movie-database-unofficial.p.rap
                  .openConnection() as HttpURLConnection
 
 connection.setRequestProperty( 'x-rapidapi-host', 'imdb-internet-movie-database-unofficial.p.rapidapi.com' )
-connection.setRequestProperty( 'x-rapidapi-key', 'f5db1bd94dmsh3e95994a440123ap12f61djsna14efa81e0f2')  
+connection.setRequestProperty( 'x-rapidapi-key', 'f5db1bd94dmsh3e95994a440123ap12f61djsna14efa81e0f2') 
+connection.setRequestProperty("User-Agent", "GroovyScript")
 connection.setRequestProperty( 'Accept', 'application/json' )
 connection.setRequestProperty( 'Content-Type', 'application/json')
 
