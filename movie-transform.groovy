@@ -27,4 +27,5 @@ if ( connection.responseCode == 200 ) {
 }
 
 println movie
+
 JsonOutput.toJson(movie)
